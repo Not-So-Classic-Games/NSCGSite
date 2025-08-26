@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Not-So Classic Games</title>
+  <meta name="description" content="Not-So Classic Games is an independent game development studio focused on creating original, handcrafted games with depth, heart, and purpose." />
+
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1d1Z7UJd-2fwCzYgYTDZXWjCJHcoSxBCf" />
+  <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/1d1Z7UJd-2fwCzYgYTDZXWjCJHcoSxBCf" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0d10;         /* page background */
+      --bg-2:#11141a;       /* panels */
+      --ink:#e7ebf2;        /* text */
+      --ink-dim:#b7c0cf;    /* secondary text */
+      --accent:#ff7f00;     /* brand orange */
+      --accent-2:#29b6f6;   /* highlight */
+      --card:#0f1217;
+      --maxw:1200px;
+      --radius:16px;
+      --shadow:0 8px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.02);
+    }
+    *{box-sizing:border-box}
+	
+html, body {margin: 0;background: linear-gradient(to bottom,
+    rgba(75, 75, 75, 0.25) 0%,
+    rgba(75, 75, 75, 0.15) 15%,
+    rgba(25, 25, 25, 0.7) 40%,
+    rgba(25, 25, 25, 0.9) 100%
+  ),
+  var(--bg);
+  color: var(--ink);
+  font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+    a{color:var(--accent)}   a:hover{opacity:.9}
+    img{max-width:100%; display:block}
+    .wrap{max-width:var(--maxw); margin-inline:auto; padding:0 5px}
+    .btn{display:inline-flex; align-items:center; gap:.6rem; padding:.8rem 1.1rem; border-radius:999px; font-weight:700; letter-spacing:.2px; color:#0a0b0d; background:var(--accent); border:0; cursor:pointer; box-shadow:var(--shadow); text-decoration:none}
+    .btn.alt{background:#2c2c2c; color:var(--ink)}
+    .btn.ghost{background:transparent; outline:1px solid rgba(231,235,242,.15); color:var(--ink)}
+    .pill{display:inline-block; padding:.25rem .7rem; border-radius:5px; background:rgba(255,122,26,.12); color:#ffd7bd; font-weight:700; letter-spacing:.3px}
+    header.site{position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) blur(8px); background:rgba(11,13,16,.7); border-bottom:1px solid rgba(231,235,242,.06)}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:12px 0}
+    .brand{display:flex; align-items:center; gap:.8rem; text-decoration:none}
+    .brand img{height:26px}
+    .brand b{font-family:'Chakra Petch',system-ui; letter-spacing:.5px; font-weight:800; font-size:1.05rem}
+    .navlinks{display:flex; gap:1.1rem; align-items:center}
+    .navlinks a{color:var(--ink); text-decoration:none; opacity:.9}
+    .hamburger{display:none; background:transparent; border:0; color:var(--ink); font-size:1.4rem}
+
+    .hero{padding:60px 0 30px; position:relative}
+    .hero .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:30px; align-items:center}
+    .hero h1{font:800 clamp(1.8rem, 3vw, 3rem)/1.15 'Chakra Petch', Inter, sans-serif; margin:.2rem 0 .6rem}
+    .hero p{color:var(--ink-dim); margin:.3rem 0 1.2rem}
+    .hero .frame{border-radius:var(--radius); background:var(--card); padding:14px; box-shadow:var(--shadow)}
+
+    section{padding:50px 0}
+    h2.section{font:800 clamp(1.3rem,2.4vw,2rem)/1.2 'Chakra Petch', Inter, sans-serif; margin:0 0 18px}
+    .lede{color:var(--ink-dim); margin:0 0 26px}
+
+    .values{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:14px}
+    .value{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0)); border:1px solid rgba(231,235,242,.08); border-radius:12px; padding:14px}
+    .value b{display:block; font-weight:800; margin-bottom:8px}
+    .cards{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px}
+    .card{background:var(--card); border:1px solid rgba(231,235,242,.08); border-radius:14px; overflow:hidden; box-shadow:var(--shadow)}
+    .card .body{padding:14px}
+
+    .team{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px}
+    .person{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0)); border:1px solid rgba(231,235,242,.08); border-radius:12px; padding:14px}
+    .person b{display:block; font-weight:800}
+    .person small{color:var(--ink-dim)}
+
+	.divider {
+	height: 2px;
+	background: linear-gradient(
+		to right,
+		rgba(75, 75, 75, 0) 0%,
+		rgba(75, 75, 75, 0.3) 50%,
+		rgba(75, 75, 75, 0) 100%
+	);
+	margin: 2rem 0;
+	}
+
+
+    footer{padding:36px 0 60px; border-top:1px solid rgba(231,235,242,.06); color:var(--ink-dim)}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .navlinks{display:none}
+      .hamburger{display:block}
+      .hero .grid{grid-template-columns:1fr}
+      .values{grid-template-columns:1fr 1fr}
+      .cards{grid-template-columns:1fr}
+      .team{grid-template-columns:1fr}
+    }
+  </style>
+  
+</head>
+<body>
+  <!-- ===================== HEADER ===================== -->
+  <header class="site">
+    <div class="wrap nav">
+      <a href="#top" class="brand">
+        <!-- Logo from NSCG site -->
+        <img src="https://lh3.googleusercontent.com/d/1d1Z7UJd-2fwCzYgYTDZXWjCJHcoSxBCf" alt="Not-So Classic Games logo" />
+        <b>Not-So Classic Games</b>
+      </a>
+
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#values">Values</a>
+        <a href="#games">Games</a>
+        <a href="#team">Team</a>
+        <a href="#join">Join</a>
+        <!--<a class="btn alt" href="https://store.steampowered.com/developer/NotSoClassicGames" target="_blank" rel="noopener">Steam Developer</a>-->
+      </nav>
+
+      <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.navlinks').style.display = document.querySelector('.navlinks').style.display==='flex'?'none':'flex'">☰</button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <h1>Not-So Classic Games.<br><span style="color:var(--accent);">Game Developers</span></h1>
+          <p>Not-So Classic Games is an independent game development studio focused on creating original, handcrafted games with depth, heart, and purpose.</p>
+          <div style="display:flex; gap:.6rem; flex-wrap:wrap">
+            <a class="btn" href="https://store.steampowered.com/developer/NotSoClassicGames" target="_blank" rel="noopener">Steam Developer Page</a>
+            <a class="btn alt" href="#games">Explore our games</a>
+            <a class="btn ghost" href="#join">Join the team</a>
+          </div>
+        </div>
+        <div>
+          <div class="frame">
+            <img src="https://lh4.googleusercontent.com/orQhOsFUas9P29U_z0LOimpa-VwlCM48yseQ3vUapdbHnfztd4jnbV3Bwtdz1ac4ENPistb3wwhNZGGoKJYRxNbMrYx0Iz-pEnTnF6YMSDExwZSsMJqL9cgqbZuZfyIJRYggG0ngkBQoqafBbDxeOwwsjqG5WAuEcQqT1ZA7PbVeG0MLrkD2lw=w1280" alt="Our Games" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+	<div class="divider"></div>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="wrap">
+      <h2 class="section">About Us</h2>
+      <div class="divider"></div>
+	  <p class="lede">We design and build games that value creativity over convention. Our team is committed to staying independent, not just in name, but in philosophy. That means no exploitative monetization, no soulless or cash-grab design, and no reliance on generative AI. Every line of code, every piece of art, and every mechanic is made by real people with real intent.</p>
+    </div>
+  </section>
+
+  <!-- ===================== VALUES ===================== -->
+  <section id="values">
+    <div class="wrap">
+      <h2 class="section">Studio Values</h2>
+	  <div class="divider"></div>
+      <div class="values">
+        <div class="value"><b>No crunch culture</b><span>We believe great games don't require burning out the people who make them.</span></div>
+        <div class="value"><b>Player-First mindset</b><span>Design decisions are made with respect for the player's time, intelligence, and enjoyment.</span></div>
+        <div class="value"><b>Handmade, always</b><span>Every asset is created by real artists, no generative AI, no shortcuts.</span></div>
+        <div class="value"><b>No pay-to-win</b><span>We reject manipulative monetization. If it feels scummy, we don't do it.</span></div>
+        <div class="value"><b>Talent and creativity first</b><span>Our team’s originality drives every project. We might follow trends, but creativity always leads.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GAMES ===================== -->
+  <section id="games">
+    <div class="wrap">
+      <h2 class="section">Our Games</h2>
+      <p class="lede">Check out what we have made, plus upcoming projects.</p>
+	  <div class="divider"></div>
+      <div class="cards">
+
+        <!-- Game Card: Cat Warfare -->
+        <article class="card">
+          <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/923370/header.jpg?t=1754269254" alt="Cat Warfare key art" />
+          <div class="body">
+            <h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'">Cat Warfare</h3>
+			<h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'; color: rgba(255, 255, 255, .5);">Release: 2018</h3>
+            <p style="margin:0 0 12px; color:var(--ink-dim)">Cat Warfare is a multiplayer first person shooter that lets you take the place of a cat out for revenge, blood and glory.</p>
+            <div style="display:flex; gap:.6rem; flex-wrap:wrap">
+              <a class="btn" href="https://store.steampowered.com/app/923370/Cat_Warfare?utm_source=NSCG" target="_blank" rel="noopener">View On Steam</a>
+              <a class="btn ghost" href="https://www.youtube.com/watch?v=C_Xx2DSSLcs" target="_blank" rel="noopener">Game Trailer</a>
+            </div>
+          </div>
+        </article>
+		
+		<!-- Game Card: Down The Hole -->
+        <article class="card">
+          <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1260160/header.jpg?t=1754269439" alt="Down The Hole key art" />
+          <div class="body">
+            <h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'">Down The Hole</h3>
+			<h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'; color: rgba(255, 255, 255, .5);">Release: 2020</h3>
+            <p style="margin:0 0 12px; color:var(--ink-dim)">Down The Hole is a unique puzzle based game where you quite literally have to go down the hole.</p>
+            <div style="display:flex; gap:.6rem; flex-wrap:wrap">
+              <a class="btn" href="https://store.steampowered.com/app/1260160/Down_The_Hole/?utm_source=NSCG" target="_blank" rel="noopener">View On Steam</a>
+            </div>
+          </div>
+        </article>
+		
+		<!-- Game Card: Where Is My Parking Spot -->
+        <article class="card">
+          <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1374400/header.jpg?t=1754269437" alt="Where Is My Parking Spot key art" />
+          <div class="body">
+            <h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'">Where is My Parking Spot</h3>
+			<h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'; color: rgba(255, 255, 255, .5);">Release: 2020</h3>
+            <p style="margin:0 0 12px; color:var(--ink-dim)">Where is my parking spot!? You have that urge, that drive, You MUST get to that special parking spot!</p>
+            <div style="display:flex; gap:.6rem; flex-wrap:wrap">
+              <a class="btn" href="https://store.steampowered.com/app/1374400/Where_Is_My_Parking_Spot/?utm_source=NSCG" target="_blank" rel="noopener">View On Steam</a>
+            </div>
+          </div>
+        </article>
+
+		<!-- Game Card: Where Is My Parking Spot - Parking Reimagined -->
+        <article class="card">
+          <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1631260/header.jpg?t=1754269444" alt="Where Is My Parking Spot PR key art" />
+          <div class="body">
+            <h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'">Where Is My Parking Spot - Parking Reimagined</h3>
+			<h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'; color: rgba(255, 0, 0, .75);">Release: Canceled</h3>
+            <p style="margin:0 0 12px; color:var(--ink-dim)">Not-So Classic Games, brings you the sequel to Where Is My Parking Spot. Drive, Drift and Slide your way to that special parking spot of yours.</p>
+            <div style="display:flex; gap:.6rem; flex-wrap:wrap">
+              <a class="btn" href="https://store.steampowered.com/app/1374400/Where_Is_My_Parking_Spot/?utm_source=NSCG" target="_blank" rel="noopener">View On Steam</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Game Card: JunkRats -->
+        <article class="card">
+		  <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1495770/c7df483fdaf49820f54315a2415e1a73edda6323/header.jpg" alt="JunkRats key art" />
+          <div class="body">
+            <h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'">JunkRats</h3>
+			<h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'; color: rgba(255, 255, 255, .5);">Release: TBA</h3>
+            <p style="margin:0 0 12px; color:var(--ink-dim)">The world ravaged by a mutating virus. The Runners part of a ruthless gang called JunkRats, scavenge and scrap whatever they can, anything needed to survive, and turn a profit while doing it.</p>
+            <div style="display:flex; gap:.6rem; flex-wrap:wrap">
+              <a class="btn" href="https://store.steampowered.com/search/?developer=Not-So%20Classic%20Games" target="_blank" rel="noopener">Wishlist Now!</a>
+            </div>
+          </div>
+        </article>
+		
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TEAM ===================== -->
+  <section id="team">
+    <div class="wrap">
+      <h2 class="section">Team</h2>
+      <p class="lede">The talented team behind our games!</p>
+	  <div class="divider"></div>
+      
+	  <div class="team">
+        <!-- Names & roles sourced from NSCG Team page; add headshots if desired -->
+        <div class="person"><img src="https://i.imgur.com/dEiJn2H.png"/><b>Danyon “Sonicboomcolt” Huntington</b><small>Founder & CEO • Lead Programmer • Music Composer</small></div>
+        <div class="person"><img src="https://i.imgur.com/1svoPNr.png"/><b>Adara “Ari”</b><small>Concept Artist • Level Designer • Promo Art</small></div>
+        <div class="person"><img src="https://i.imgur.com/1YAW3pT.png"/><b>Cade “NNJ” Hill</b><small>Concept Artist • 2D Animator • Storyboards</small></div>
+        <div class="person"><img src="https://i.imgur.com/8e4TC26.png"/><b>Joshua “J3rockin” Padgett</b><small>Quality Assurance Tester • Mechanic Concepts</small></div>
+        <div class="person"><img src="https://i.imgur.com/HJLzvTQ.png"/><b>Michael “Swordman27” Brook</b><small>Story Writer • 3D Modeler</small></div>
+        <div class="person"><img src="https://i.imgur.com/4VU11Io.png"/><b>Glen “Evolved Phoenix” Treasure</b><small>Supporting Programmer • Supporting QA</small></div>
+        <div class="person"><img src="https://i.imgur.com/lzdHQ2f.png"/><b>Kai “EmoCat_Special”</b><small>Concept Art • Promo Art • Steam Store Art</small></div>
+        <div class="person"><img src="https://i.imgur.com/6oAQGYV.png"/><b>Matthew “Sukhoikip” Bogle</b><small>Performance Testing • QA</small></div>
+        <div class="person"><img src="https://i.imgur.com/0R02Ydv.png"/><b>Braxie “Pikakid98” Moone</b><small>QA Tester • Cat Warfare Announcer • Voice Actor</small></div>
+      </div>
+    </div>
+  </section>
+
+<div class="divider"></div>
+
+  <!-- ===================== JOIN ===================== -->
+  <section id="join">
+    <div class="wrap">
+      <h2 class="section">Join Us</h2>
+      <p class="lede">Want to volunteer? Join our team! Note: opportunities are volunteer‑based until revenue allows otherwise.</p>
+	  <div class="divider"></div>
+      <div style="display:flex; gap:.6rem; flex-wrap:wrap">
+        <a class="btn" href="https://forms.gle/PutLNR7r1VWczhLs7" target="_blank" rel="noopener">Application Form</a>
+        <a class="btn ghost" href="https://store.steampowered.com/developer/NotSoClassicGames" target="_blank" rel="noopener">Join Our Discord</a>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="wrap" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; align-items:center">
+      <div style="opacity:.85">© <span id="year"></span> Not-So Classic Games, 2025</div>
+      <nav style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center">
+        <!-- Replace these placeholders with your real links -->
+        <a href="https://github.com/" target="_blank" rel="noopener">Discord</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">Patreon</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ========= HOW TO CUSTOMIZE =========
+  1) Colors & sizing: tweak CSS variables in :root at the top of this file.
+  2) Games: duplicate a .card in the #games section and fill in your details and links.
+  3) Team: edit the list under #team (add/remove .person entries). If you have headshots, drop <img> before the <b> tag.
+  4) Socials: replace footer placeholder links with your real profiles.
+  5) Logo/art: swap the <img> sources with your own assets when ready.
+  6) Mobile nav: the ☰ button toggles links on small screens.
+  7) Quick edits live: press Ctrl+E to toggle inline editing, then save the file.
+  ======================================= -->
+</body>
+</html>
