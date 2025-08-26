@@ -67,9 +67,14 @@ html, body {margin: 0;background: linear-gradient(to bottom,
     .values{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:14px}
     .value{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0)); border:1px solid rgba(231,235,242,.08); border-radius:12px; padding:14px}
     .value b{display:block; font-weight:800; margin-bottom:8px}
+	
     .cards{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px}
     .card{background:var(--card); border:1px solid rgba(231,235,242,.08); border-radius:14px; overflow:hidden; box-shadow:var(--shadow)}
     .card .body{padding:14px}
+	
+	.thanks{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:14px}
+    .thank{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0)); border:1px solid rgba(231,235,242,.08); border-radius:12px; padding:14px}
+    .thank b{display:block; font-weight:800; margin-bottom:8px}
 
     .team{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px}
     .person{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0)); border:1px solid rgba(231,235,242,.08); border-radius:12px; padding:14px}
@@ -113,10 +118,12 @@ html, body {margin: 0;background: linear-gradient(to bottom,
       </a>
 
       <nav class="navlinks" aria-label="Primary">
+        <a href="#top">Home</a>
         <a href="#about">About</a>
         <a href="#values">Values</a>
         <a href="#games">Games</a>
         <a href="#team">Team</a>
+        <a href="#thanks">Thanks</a>
         <a href="#join">Join</a>
         <!--<a class="btn alt" href="https://store.steampowered.com/developer/NotSoClassicGames" target="_blank" rel="noopener">Steam Developer</a>-->
       </nav>
@@ -204,6 +211,7 @@ html, body {margin: 0;background: linear-gradient(to bottom,
             <p style="margin:0 0 12px; color:var(--ink-dim)">Down The Hole is a unique puzzle based game where you quite literally have to go down the hole.</p>
             <div style="display:flex; gap:.6rem; flex-wrap:wrap">
               <a class="btn" href="https://store.steampowered.com/app/1260160/Down_The_Hole/?utm_source=NSCG" target="_blank" rel="noopener">View On Steam</a>
+			  <a class="btn ghost" href="https://www.youtube.com/watch?v=ibwy33okTeU" target="_blank" rel="noopener">Game Trailer</a>
             </div>
           </div>
         </article>
@@ -217,6 +225,7 @@ html, body {margin: 0;background: linear-gradient(to bottom,
             <p style="margin:0 0 12px; color:var(--ink-dim)">Where is my parking spot!? You have that urge, that drive, You MUST get to that special parking spot!</p>
             <div style="display:flex; gap:.6rem; flex-wrap:wrap">
               <a class="btn" href="https://store.steampowered.com/app/1374400/Where_Is_My_Parking_Spot/?utm_source=NSCG" target="_blank" rel="noopener">View On Steam</a>
+			  <a class="btn ghost" href="https://www.youtube.com/watch?v=dymxEM7D1YY" target="_blank" rel="noopener">Game Trailer</a>
             </div>
           </div>
         </article>
@@ -229,7 +238,7 @@ html, body {margin: 0;background: linear-gradient(to bottom,
 			<h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'; color: rgba(255, 0, 0, .75);">Release: Canceled</h3>
             <p style="margin:0 0 12px; color:var(--ink-dim)">Not-So Classic Games, brings you the sequel to Where Is My Parking Spot. Drive, Drift and Slide your way to that special parking spot of yours.</p>
             <div style="display:flex; gap:.6rem; flex-wrap:wrap">
-              <a class="btn" href="https://store.steampowered.com/app/1374400/Where_Is_My_Parking_Spot/?utm_source=NSCG" target="_blank" rel="noopener">View On Steam</a>
+              <a class="btn" href="https://store.steampowered.com/app/1631260/Where_Is_My_Parking_Spot__Parking_Reimagined/?utm_source=NSCG" target="_blank" rel="noopener">View On Steam</a>
             </div>
           </div>
         </article>
@@ -242,7 +251,8 @@ html, body {margin: 0;background: linear-gradient(to bottom,
 			<h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'; color: rgba(255, 255, 255, .5);">Release: TBA</h3>
             <p style="margin:0 0 12px; color:var(--ink-dim)">The world ravaged by a mutating virus. The Runners part of a ruthless gang called JunkRats, scavenge and scrap whatever they can, anything needed to survive, and turn a profit while doing it.</p>
             <div style="display:flex; gap:.6rem; flex-wrap:wrap">
-              <a class="btn" href="https://store.steampowered.com/search/?developer=Not-So%20Classic%20Games" target="_blank" rel="noopener">Wishlist Now!</a>
+              <a class="btn" href="https://store.steampowered.com/app/1495770/JunkRats/?utm_source=NSCG" target="_blank" rel="noopener">Wishlist Now!</a>
+			  <a class="btn ghost" href="https://www.youtube.com/watch?v=cR0glsCnckk" target="_blank" rel="noopener">Game Trailer</a>
             </div>
           </div>
         </article>
@@ -275,6 +285,22 @@ html, body {margin: 0;background: linear-gradient(to bottom,
 
 <div class="divider"></div>
 
+<!-- ===================== SPECIAL THANKS ===================== -->
+<section id="thanks">
+  <div class="wrap">
+    <h2 class="section">Special Thanks</h2>
+    <div class="divider"></div>
+    <div class="thanks">
+	  <div class="thank"><b>FirstGearGames</b><span> Without your Fish-Networking, our games could fall flat on networking.</span></div>
+      <div class="thank"><b>Our Players</b><span> Without your support and feedback, none of this would be possible.</span></div>
+      <div class="thank"><b>Friends & Family</b><span> For patience, encouragement, and putting up with long dev cycles.</span></div>
+      <div class="thank"><b>Community Contributors</b><span> From testers to fan artists, you make the studio stronger.</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
   <!-- ===================== JOIN ===================== -->
   <section id="join">
     <div class="wrap">
@@ -295,10 +321,10 @@ html, body {margin: 0;background: linear-gradient(to bottom,
       <div style="opacity:.85">© <span id="year"></span> Not-So Classic Games, 2025</div>
       <nav style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center">
         <!-- Replace these placeholders with your real links -->
-        <a href="https://github.com/" target="_blank" rel="noopener">Discord</a>
-        <a href="https://github.com/" target="_blank" rel="noopener">Twitter</a>
-        <a href="https://github.com/" target="_blank" rel="noopener">Patreon</a>
-        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://discord.gg/JcfeNDnC5k" target="_blank" rel="noopener">Discord</a>
+        <a href="https://twitter.com/NSClassicGames" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://www.patreon.com/NotSoClassicGames/" target="_blank" rel="noopener">Patreon</a>
+		<a href="https://www.youtube.com/@NotSoClassicGames" target="_blank" rel="noopener">YouTube</a>
       </nav>
     </div>
   </footer>
