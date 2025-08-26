@@ -1,3 +1,10 @@
+<!-- 
+
+If you found this, congrats you're looking at the HTML code for our site.
+No need to be snooping around now. ;)
+
+-->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -104,6 +111,38 @@ html, body {margin: 0;background: linear-gradient(to bottom,
       .cards{grid-template-columns:1fr}
       .team{grid-template-columns:1fr}
     }
+	
+	.slideshow {
+	position: relative;
+	width: 600px;   /* adjust size */
+	height: 300px;  /* adjust size */
+	overflow: hidden;
+	}
+	.slideshow img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	animation: fade 25s infinite;
+	}
+	
+	/* 5 images × 5s each = 25s loop */
+	.slideshow img:nth-child(1) { animation-delay: 0s; }
+	.slideshow img:nth-child(2) { animation-delay: 5s; }
+	.slideshow img:nth-child(3) { animation-delay: 10s; }
+	.slideshow img:nth-child(4) { animation-delay: 15s; }
+	.slideshow img:nth-child(5) { animation-delay: 20s; }
+	
+	@keyframes fade {
+	0%   { opacity: 0; }
+	10%  { opacity: 1; }  /* fade in */
+	30%  { opacity: 1; }  /* hold */
+	40%  { opacity: 0; }  /* fade out */
+	100% { opacity: 0; }
+	}
+	
   </style>
   
 </head>
@@ -125,7 +164,6 @@ html, body {margin: 0;background: linear-gradient(to bottom,
         <a href="#team">Team</a>
         <a href="#thanks">Thanks</a>
         <a href="#join">Join</a>
-        <!--<a class="btn alt" href="https://store.steampowered.com/developer/NotSoClassicGames" target="_blank" rel="noopener">Steam Developer</a>-->
       </nav>
 
       <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.navlinks').style.display = document.querySelector('.navlinks').style.display==='flex'?'none':'flex'">☰</button>
@@ -147,7 +185,13 @@ html, body {margin: 0;background: linear-gradient(to bottom,
         </div>
         <div>
           <div class="frame">
-            <img src="https://lh4.googleusercontent.com/orQhOsFUas9P29U_z0LOimpa-VwlCM48yseQ3vUapdbHnfztd4jnbV3Bwtdz1ac4ENPistb3wwhNZGGoKJYRxNbMrYx0Iz-pEnTnF6YMSDExwZSsMJqL9cgqbZuZfyIJRYggG0ngkBQoqafBbDxeOwwsjqG5WAuEcQqT1ZA7PbVeG0MLrkD2lw=w1280" alt="Our Games" />
+            <div class="slideshow">
+				<img src="" alt="Slide 1">
+				<img src="" alt="Slide 2">
+				<img src="" alt="Slide 3">
+				<img src="" alt="Slide 4">
+				<img src="" alt="Slide 5">
+			</div>
           </div>
         </div>
       </div>
@@ -269,7 +313,6 @@ html, body {margin: 0;background: linear-gradient(to bottom,
 	  <div class="divider"></div>
       
 	  <div class="team">
-        <!-- Names & roles sourced from NSCG Team page; add headshots if desired -->
         <div class="person"><img src="https://i.imgur.com/dEiJn2H.png"/><b>Danyon “Sonicboomcolt” Huntington</b><small>Founder & CEO • Lead Programmer • Music Composer</small></div>
         <div class="person"><img src="https://i.imgur.com/1svoPNr.png"/><b>Adara “Ari”</b><small>Concept Artist • Level Designer • Promo Art</small></div>
         <div class="person"><img src="https://i.imgur.com/1YAW3pT.png"/><b>Cade “NNJ” Hill</b><small>Concept Artist • 2D Animator • Storyboards</small></div>
@@ -309,7 +352,7 @@ html, body {margin: 0;background: linear-gradient(to bottom,
 	  <div class="divider"></div>
       <div style="display:flex; gap:.6rem; flex-wrap:wrap">
         <a class="btn" href="https://forms.gle/PutLNR7r1VWczhLs7" target="_blank" rel="noopener">Application Form</a>
-        <a class="btn ghost" href="https://store.steampowered.com/developer/NotSoClassicGames" target="_blank" rel="noopener">Join Our Discord</a>
+        <a class="btn ghost" href="https://discord.gg/JcfeNDnC5k" target="_blank" rel="noopener">Join Our Discord</a>
       </div>
       
     </div>
@@ -318,9 +361,9 @@ html, body {margin: 0;background: linear-gradient(to bottom,
   <!-- ===================== FOOTER ===================== -->
   <footer>
     <div class="wrap" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; align-items:center">
-      <div style="opacity:.85">© <span id="year"></span> Not-So Classic Games, 2025</div>
+      <div style="opacity:.85">© <span id="year"></span> Not-So Classic Games, 2025 <br> Thanks to Evolved Phoenix for site template.</div>
       <nav style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center">
-        <!-- Replace these placeholders with your real links -->
+	  
         <a href="https://discord.gg/JcfeNDnC5k" target="_blank" rel="noopener">Discord</a>
         <a href="https://twitter.com/NSClassicGames" target="_blank" rel="noopener">Twitter</a>
         <a href="https://www.patreon.com/NotSoClassicGames/" target="_blank" rel="noopener">Patreon</a>
@@ -328,15 +371,5 @@ html, body {margin: 0;background: linear-gradient(to bottom,
       </nav>
     </div>
   </footer>
-
-  <!-- ========= HOW TO CUSTOMIZE =========
-  1) Colors & sizing: tweak CSS variables in :root at the top of this file.
-  2) Games: duplicate a .card in the #games section and fill in your details and links.
-  3) Team: edit the list under #team (add/remove .person entries). If you have headshots, drop <img> before the <b> tag.
-  4) Socials: replace footer placeholder links with your real profiles.
-  5) Logo/art: swap the <img> sources with your own assets when ready.
-  6) Mobile nav: the ☰ button toggles links on small screens.
-  7) Quick edits live: press Ctrl+E to toggle inline editing, then save the file.
-  ======================================= -->
 </body>
 </html>
