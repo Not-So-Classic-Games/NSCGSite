@@ -5,16 +5,28 @@
   <title>404 | Not-So Classic Games</title>
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background: var(--bg);
-      color: var(--ink);
-      text-align: center;
-      font-family: 'Chakra Petch', Inter, sans-serif;
-    }
+  
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background: linear-gradient(to bottom,
+    rgba(75, 75, 75, 0.25) 0%,
+    rgba(75, 75, 75, 0.15) 15%,
+    rgba(25, 25, 25, 0.7) 40%,
+    rgba(25, 25, 25, 0.9) 100%
+  ), var(--bg);
+
+  color: var(--ink);
+  font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+	
     .error-container h1 {
       font-size: clamp(3rem, 10vw, 6rem);
       color: var(--accent);
@@ -41,8 +53,27 @@
   <div class="error-container">
     <h1>404</h1>
     <p><span class="blink">[</span> GAME OVER <span class="blink">]</span></p>
-    <p>This page doesn’t exist… or it’s falling Down The Hole.</p>
+    <p id="message">Page Missing...</p>
     <a class="btn" href="./">Back to Home</a>
   </div>
+  
+  <script>
+  window.onload = function ()
+  {
+    const messages = [
+		"This page doesn’t exist... or it’s falling Down The Hole.",
+		"The page has despawned.",
+		"Object reference not set to an instance of an object.",
+		"This page doesn’t exist... whoops.",
+		"The cat stole this page... Sorry!",
+		"You found page 404, Nice!",
+		"I think this page was- whoops, it's gone."
+  ];
+  
+  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+  document.getElementById("message").textContent = randomMessage;
+  };
+  </script>
+  
 </body>
 </html>
