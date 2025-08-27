@@ -1,5 +1,5 @@
 :root{
-  --bg:#0b0d10;         /* page background */
+  --bg:#141414;         /* page background */
   --bg-2:#11141a;       /* panels */
   --ink:#e7ebf2;        /* text */
   --ink-dim:#b7c0cf;    /* secondary text */
@@ -20,12 +20,7 @@ html {
 
 html, body {
   margin: 0;
-  background: linear-gradient(to bottom,
-    rgba(75, 75, 75, 0.25) 0%,
-    rgba(75, 75, 75, 0.15) 15%,
-    rgba(25, 25, 25, 0.7) 40%,
-    rgba(25, 25, 25, 0.9) 100%
-  ), var(--bg);
+  background: var(--bg);
   color: var(--ink);
   font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
@@ -109,8 +104,6 @@ header.site{position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) b
   opacity: 1;
 }
 
-
-
 .hamburger{display:none; background:transparent; border:0; color:var(--ink); font-size:1.4rem}
 
 .hero{padding:60px 0 30px; position:relative}
@@ -119,24 +112,16 @@ header.site{position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) b
 .hero p{color:var(--ink-dim); margin:.3rem 0 1.2rem}
 .hero .frame img{
   width:100%;
-  height:auto;
+  height:108%;
   display:block;
   border-radius:var(--radius);
 }
 
-.hero {
-  padding: 60px 0 30px;
-  position: relative;
-  background: linear-gradient(to bottom,
-    rgba(75, 75, 75, 0.25) 0%,
-    rgba(75, 75, 75, 0.15) 15%,
-    rgba(25, 25, 25, 0.7) 40%,
-    rgba(25, 25, 25, 0.9) 100%
-  ), url();
-  background-size: cover;
-  background-position: center;
+.hero{
+  padding:60px 0 30px;
+  position:relative;
+  background: linear-gradient(to bottom, #7772 0%, var(--bg) 100%);
 }
-
 
 section{padding:50px 0}
 h2.section{font:800 clamp(1.3rem,2.4vw,2rem)/1.2 'Chakra Petch', Inter, sans-serif; margin:0 0 18px}
@@ -160,7 +145,7 @@ h2.section{font:800 clamp(1.3rem,2.4vw,2rem)/1.2 'Chakra Petch', Inter, sans-ser
 .person small{text-align:center;color:var(--ink-dim)}
 
 .divider{
-  height:2px;
+  height:2.5px;
   background:linear-gradient(to right, rgba(75,75,75,0) 0%, rgba(75,75,75,.3) 50%, rgba(75,75,75,0) 100%);
   margin:2rem 0;
 }
@@ -175,6 +160,7 @@ footer{padding:36px 0 60px; border-top:1px solid rgba(231,235,242,.06); color:va
   .values{grid-template-columns:1fr 1fr}
   .cards{grid-template-columns:1fr}
   .team{grid-template-columns:1fr}
+  .slideshow{display:none}
 }
 
 .slideshow{
