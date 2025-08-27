@@ -236,6 +236,11 @@ footer{padding:36px 0 60px; border-top:1px solid rgba(231,235,242,.06); color:va
   z-index: 100;
 }
 
+.dropdown-content {
+  right: 0;
+  left: auto;
+}
+
 /* Dropdown links */
 .dropdown-content a {
   color: var(--ink);
