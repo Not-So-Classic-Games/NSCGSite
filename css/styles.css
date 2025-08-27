@@ -18,7 +18,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 html, body {
   margin: 0;
   background: linear-gradient(to bottom,
@@ -255,10 +254,10 @@ footer{padding:36px 0 60px; border-top:1px solid rgba(231,235,242,.06); color:va
 
 .media-block {
   display: flex;
-  gap: 20px; /* space between image and text */
+  gap: 20px;
 }
 
 .media-block img {
-  max-width: 300px; /* control image size */
+  max-width: 300px;
   height: auto;
 }
