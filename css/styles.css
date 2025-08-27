@@ -66,9 +66,9 @@ header.site{position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) b
 
 /* Ghost button (outlined) */
 .btn.ghost:hover {
-  box-shadow: 0 0 12px var(--accent-2), 0 0 20px var(--accent-2);
-  color: var(--accent-2);
-  border-color: var(--accent-2);
+  box-shadow: 0 0 12px var(--accent), 0 0 20px var(--accent);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 /*.btn.discord {
@@ -87,7 +87,7 @@ header.site{position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) b
 
 .btn.steam:hover {
   box-shadow: 0 0 12px var(--accent-steam), 0 0 20px var(--accent-steam);
-  color: var(--ink);
+  color: var(--link);
   border-color: var(--accent-steam);
 }
 
@@ -251,4 +251,14 @@ footer{padding:36px 0 60px; border-top:1px solid rgba(231,235,242,.06); color:va
 /* Show menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.media-block {
+  display: flex;
+  gap: 20px; /* space between image and text */
+}
+
+.media-block img {
+  max-width: 300px; /* control image size */
+  height: auto;
 }
