@@ -48,20 +48,21 @@ We want to thank all of our players and love everyones support!
         <b>Not-So Classic Games</b>
       </a>
 
-<nav class="navlinks" aria-label="Primary">
-  <a href="/">Home</a>
-  <a href="../games/">Games</a>
-  <a href="../team/">Team</a>
-  <a href="../community/">Community</a>
-  
-    <!-- Dropdown -->
-  <div class="dropdown">
-    <button class="dropbtn">Support Us ▾</button>
-    <div class="dropdown-content">
-		<a href="https://www.patreon.com/NotSoClassicGames/" target="_blank" rel="noopener">Patreon</a>
-    </div>
-  </div>
-</nav>
+<div id="site-nav"></div>
+<script>
+  (function() {
+    var BASE = '';
+    var target = document.getElementById('site-nav');
+
+    fetch(BASE + '/nav.html', { cache: 'no-cache' })
+      .then(function(res) { return res.text(); })
+      .then(function(html) { target.innerHTML = html; })
+      .catch(function(err) {
+        console.error('Nav failed to load', err);
+        target.innerHTML = '<!-- nav failed to load -->';
+      });
+  })();
+</script>
 
 
       <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.navlinks').style.display = document.querySelector('.navlinks').style.display==='flex'?'none':'flex'">☰</button>
@@ -156,17 +157,13 @@ We want to thank all of our players and love everyones support!
   </section>
 
   <!-- ===================== FOOTER ===================== -->
-  <footer>
-    <div class="wrap" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; align-items:center">
-      <div style="opacity:.85">© <span id="year"></span> Not-So Classic Games <br> Thanks to Evolved Phoenix for site template. <br>Contact: support@notsoclassicgames.com</div>
-      <nav style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center">
-	  
-        <a href="https://discord.notsoclassicgames.com/" target="_blank" rel="noopener">Discord</a>
-        <a href="https://twitter.com/NSClassicGames" target="_blank" rel="noopener">Twitter</a>
-        <a href="https://www.patreon.com/NotSoClassicGames/" target="_blank" rel="noopener">Patreon</a>
-		<a href="https://www.youtube.com/@NotSoClassicGames" target="_blank" rel="noopener">YouTube</a>
-      </nav>
-    </div>
-  </footer>
+<div id="footer"></div>
+<script>
+  fetch("/footer.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("footer").innerHTML = html;
+    });
+</script>
 </body>
 </html>

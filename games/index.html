@@ -5,6 +5,10 @@ No need to be snooping around now. ;)
 
 We want to thank all of our players and love everyones support!
 
+Fun Fact:
+Did you know that Cat Warfare was remade 2 times before the version everyone can play on Steam.
+The game used to play like COD but later was changed to Unreal Tounament style.
+
 -->
 
 <!doctype html>
@@ -15,13 +19,13 @@ We want to thank all of our players and love everyones support!
   <title>Not-So Classic Games - Games</title>
   <meta name="description" content="Not-So Classic Games is an independent game development studio, creators of Cat Warfare and JunkRats" />
 
-  <link rel="icon" type="image/png" href="../images/brand/favcon.png" />
-  <link rel="apple-touch-icon" href="../images/brand/favcon.png" />
+  <link rel="icon" type="image/png" href="/images/brand/favcon.png" />
+  <link rel="apple-touch-icon" href="/images/brand/favcon.png" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Not-So Classic Games - Games">
   <meta property="og:description" content="Not-So Classic Games is an independent game development studio, creators of Cat Warfare and JunkRats">
-  <meta property="og:image" content="../images/brand/logo.png">
+  <meta property="og:image" content="/images/brand/logo.png">
   <meta property="og:url" content="https://www.notsoclassicgames.com/">
   <meta property="og:type" content="website">
   
@@ -29,14 +33,14 @@ We want to thank all of our players and love everyones support!
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Not-So Classic Games - Games">
   <meta name="twitter:description" content="Not-So Classic Games is an independent game development studio, creators of Cat Warfare and JunkRats">
-  <meta name="twitter:image" content="../images/brand/logo.png">
+  <meta name="twitter:image" content="/images/brand/logo.png">
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://store.cloudflare.steamstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="/css/styles.css">
 
 </head>
 <body>
@@ -49,20 +53,22 @@ We want to thank all of our players and love everyones support!
         <b>Not-So Classic Games</b>
       </a>
 
-<nav class="navlinks" aria-label="Primary">
-  <a href="/">Home</a>
-  <a href="../games/">Games</a>
-  <a href="../team/">Team</a>
-  <a href="../community/">Community</a>
-  
-  <!-- Dropdown -->
-  <div class="dropdown">
-    <button class="dropbtn">Support Us ▾</button>
-    <div class="dropdown-content">
-		<a href="https://www.patreon.com/NotSoClassicGames/" target="_blank" rel="noopener">Patreon</a>
-    </div>
-  </div>
-</nav>
+<div id="site-nav"></div>
+<script>
+  (function() {
+    var BASE = '';
+    var target = document.getElementById('site-nav');
+
+    fetch(BASE + '/nav.html', { cache: 'no-cache' })
+      .then(function(res) { return res.text(); })
+      .then(function(html) { target.innerHTML = html; })
+      .catch(function(err) {
+        console.error('Nav failed to load', err);
+        target.innerHTML = '<!-- nav failed to load -->';
+      });
+  })();
+</script>
+
 
 
       <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.navlinks').style.display = document.querySelector('.navlinks').style.display==='flex'?'none':'flex'">☰</button>
@@ -250,7 +256,7 @@ We want to thank all of our players and love everyones support!
   <section id="canceled-games">
     <div class="wrap">
       <h2 class="section">Canceled Games</h2>
-      <p class="lede">Games that we once planned to make and release, but decided against due to various reasons</p>
+      <p class="lede">Games that we once planned to make and release, but decided against due to various reasons.</p>
 	  <div class="divider"></div>
       <div class="cards">
         
@@ -275,17 +281,13 @@ We want to thank all of our players and love everyones support!
   </section>
 
   <!-- ===================== FOOTER ===================== -->
-  <footer>
-    <div class="wrap" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; align-items:center">
-      <div style="opacity:.85">© <span id="year"></span> Not-So Classic Games<br>Thanks to Evolved Phoenix for site template.<br>Thanks to Pikakid98 for some edits.<br>Contact: support@notsoclassicgames.com</div>
-      <nav style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center">
-	  
-        <a href="https://discord.notsoclassicgames.com/" target="_blank" rel="noopener">Discord</a>
-        <a href="https://twitter.com/NSClassicGames" target="_blank" rel="noopener">Twitter</a>
-        <a href="https://www.patreon.com/NotSoClassicGames/" target="_blank" rel="noopener">Patreon</a>
-		<a href="https://www.youtube.com/@NotSoClassicGames" target="_blank" rel="noopener">YouTube</a>
-      </nav>
-    </div>
-  </footer>
+<div id="footer"></div>
+<script>
+  fetch("/footer.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("footer").innerHTML = html;
+    });
+</script>
 </body>
 </html>
