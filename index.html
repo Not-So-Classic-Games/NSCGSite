@@ -3,6 +3,8 @@
 If you found this, congrats you're looking at the HTML code for our site.
 No need to be snooping around now. ;)
 
+For real, we thank all of our players, and we want to make Indestry a better place.
+
 -->
 
 <!doctype html>
@@ -19,138 +21,8 @@ No need to be snooping around now. ;)
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0b0d10;         /* page background */
-      --bg-2:#11141a;       /* panels */
-      --ink:#e7ebf2;        /* text */
-      --ink-dim:#b7c0cf;    /* secondary text */
-      --accent:#ff7f00;     /* brand orange */
-      --accent-2:#29b6f6;   /* highlight */
-      --card:#0f1217;
-      --maxw:1200px;
-      --radius:16px;
-      --shadow:0 8px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.02);
-    }
-    *{box-sizing:border-box}
-	
-html, body {margin: 0;background: linear-gradient(to bottom,
-    rgba(75, 75, 75, 0.25) 0%,
-    rgba(75, 75, 75, 0.15) 15%,
-    rgba(25, 25, 25, 0.7) 40%,
-    rgba(25, 25, 25, 0.9) 100%
-  ),
-  var(--bg);
-  color: var(--ink);
-  font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-}
+<link rel="stylesheet" href="css/styles.css">
 
-    a{color:var(--accent)}   a:hover{opacity:.9}
-    img{max-width:100%; display:block}
-    .wrap{max-width:var(--maxw); margin-inline:auto; padding:0 5px}
-    .btn{display:inline-flex; align-items:center; gap:.6rem; padding:.8rem 1.1rem; border-radius:999px; font-weight:700; letter-spacing:.2px; color:#0a0b0d; background:var(--accent); border:0; cursor:pointer; box-shadow:var(--shadow); text-decoration:none}
-    .btn.alt{background:#2c2c2c; color:var(--ink)}
-    .btn.ghost{background:transparent; outline:1px solid rgba(231,235,242,.15); color:var(--ink)}
-    .pill{display:inline-block; padding:.25rem .7rem; border-radius:5px; background:rgba(255,122,26,.12); color:#ffd7bd; font-weight:700; letter-spacing:.3px}
-    header.site{position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) blur(8px); background:rgba(11,13,16,.7); border-bottom:1px solid rgba(231,235,242,.06)}
-    .nav{display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:12px 0}
-    .brand{display:flex; align-items:center; gap:.8rem; text-decoration:none}
-    .brand img{height:26px}
-    .brand b{font-family:'Chakra Petch',system-ui; letter-spacing:.5px; font-weight:800; font-size:1.05rem}
-    .navlinks{display:flex; gap:1.1rem; align-items:center}
-    .navlinks a{color:var(--ink); text-decoration:none; opacity:.9}
-    .hamburger{display:none; background:transparent; border:0; color:var(--ink); font-size:1.4rem}
-
-    .hero{padding:60px 0 30px; position:relative}
-    .hero .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:30px; align-items:center}
-    .hero h1{font:800 clamp(1.8rem, 3vw, 3rem)/1.15 'Chakra Petch', Inter, sans-serif; margin:.2rem 0 .6rem}
-    .hero p{color:var(--ink-dim); margin:.3rem 0 1.2rem}
-    .hero .frame img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: var(--radius); /* optional, so images follow the frame’s rounded corners */
-}
-
-
-    section{padding:50px 0}
-    h2.section{font:800 clamp(1.3rem,2.4vw,2rem)/1.2 'Chakra Petch', Inter, sans-serif; margin:0 0 18px}
-    .lede{color:var(--ink-dim); margin:0 0 26px}
-
-    .values{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:14px}
-    .value{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0)); border:1px solid rgba(231,235,242,.08); border-radius:12px; padding:14px}
-    .value b{display:block; font-weight:800; margin-bottom:8px}
-	
-    .cards{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px}
-    .card{background:var(--card); border:1px solid rgba(231,235,242,.08); border-radius:14px; overflow:hidden; box-shadow:var(--shadow)}
-    .card .body{padding:14px}
-	
-	.thanks{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:14px}
-    .thank{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0)); border:1px solid rgba(231,235,242,.08); border-radius:12px; padding:14px}
-    .thank b{display:block; font-weight:800; margin-bottom:8px}
-
-    .team{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px}
-    .person{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0)); border:1px solid rgba(231,235,242,.08); border-radius:12px; padding:14px}
-    .person b{display:block; font-weight:800}
-    .person small{color:var(--ink-dim)}
-
-	.divider {
-	height: 2px;
-	background: linear-gradient(
-		to right,
-		rgba(75, 75, 75, 0) 0%,
-		rgba(75, 75, 75, 0.3) 50%,
-		rgba(75, 75, 75, 0) 100%
-	);
-	margin: 2rem 0;
-	}
-
-
-    footer{padding:36px 0 60px; border-top:1px solid rgba(231,235,242,.06); color:var(--ink-dim)}
-
-    /* Responsive */
-    @media (max-width: 900px){
-      .navlinks{display:none}
-      .hamburger{display:block}
-      .hero .grid{grid-template-columns:1fr}
-      .values{grid-template-columns:1fr 1fr}
-      .cards{grid-template-columns:1fr}
-      .team{grid-template-columns:1fr}
-    }
-	
-	.slideshow {
-	position: relative;
-	width: 600px;   /* adjust size */
-	height: 300px;  /* adjust size */
-	overflow: visible;
-	}
-	.slideshow img {
-	position: absolute;
-	inset: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	opacity: 0;
-	animation: fade 25s infinite;
-	}
-	
-	/* 5 images × 5s each = 25s loop */
-	.slideshow img:nth-child(1) { animation-delay: 0s; }
-	.slideshow img:nth-child(2) { animation-delay: 5s; }
-	.slideshow img:nth-child(3) { animation-delay: 10s; }
-	.slideshow img:nth-child(4) { animation-delay: 15s; }
-	.slideshow img:nth-child(5) { animation-delay: 20s; }
-	
-	@keyframes fade {
-	0%   { opacity: 0; }
-	10%  { opacity: 1; }  /* fade in */
-	30%  { opacity: 1; }  /* hold */
-	40%  { opacity: 0; }  /* fade out */
-	100% { opacity: 0; }
-	}
-	
-  </style>
-  
 </head>
 <body>
   <!-- ===================== HEADER ===================== -->
@@ -162,15 +34,32 @@ html, body {margin: 0;background: linear-gradient(to bottom,
         <b>Not-So Classic Games</b>
       </a>
 
-      <nav class="navlinks" aria-label="Primary">
-        <a href="#top">Home</a>
-        <a href="#about">About</a>
-        <a href="#values">Values</a>
-        <a href="#games">Games</a>
-        <a href="#team">Team</a>
-        <a href="#thanks">Thanks</a>
-        <a href="#join">Join</a>
-      </nav>
+<nav class="navlinks" aria-label="Primary">
+  <a href="#top">Home</a>
+  <a href="#about">About</a>
+  <a href="#games">Games</a>
+
+    <!-- Dropdown -->
+  <div class="dropdown">
+    <button class="dropbtn">More ▾</button>
+    <div class="dropdown-content">
+		<a href="#team">Team</a>
+		<a href="#thanks">Thanks</a>
+		<a href="#join">Join</a>
+    </div>
+  </div>
+  <!-- Dropdown -->
+  <div class="dropdown">
+    <button class="dropbtn">Community ▾</button>
+    <div class="dropdown-content">
+        <a href="https://discord.gg/JcfeNDnC5k">Discord</a>
+        <a href="https://twitter.com/NSClassicGames">Twitter</a>
+        <a href="https://www.patreon.com/NotSoClassicGames/">Patreon</a>
+		<a href="https://www.youtube.com/@NotSoClassicGames">YouTube</a>
+    </div>
+  </div>
+</nav>
+
 
       <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.navlinks').style.display = document.querySelector('.navlinks').style.display==='flex'?'none':'flex'">☰</button>
     </div>
@@ -184,8 +73,9 @@ html, body {margin: 0;background: linear-gradient(to bottom,
           <h1>Not-So Classic Games.<br><span style="color:var(--accent);">Game Developers</span></h1>
           <p>Not-So Classic Games is an independent game development studio focused on creating original, handcrafted games with depth, heart, and purpose.</p>
           <div style="display:flex; gap:.6rem; flex-wrap:wrap">
-            <a class="btn" href="https://store.steampowered.com/developer/NotSoClassicGames" target="_blank" rel="noopener">Steam Developer Page</a>
-            <a class="btn alt" href="#games">Explore our games</a>
+            <a class="btn" href="https://store.steampowered.com/developer/NotSoClassicGames" target="_blank" rel="noopener">Steam Page</a>
+            <a class="btn alt" href="#games">Our Games</a>
+            <a class="btn discord" href="https://discord.gg/JcfeNDnC5k">Join Our Discord</a>
           </div>
         </div>
         <div>
@@ -245,7 +135,12 @@ html, body {margin: 0;background: linear-gradient(to bottom,
 			<h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'; color: rgba(255, 255, 255, .5);">Release: 2018</h3>
             <p style="margin:0 0 12px; color:var(--ink-dim)">Cat Warfare is a multiplayer first person shooter that lets you take the place of a cat out for revenge, blood and glory.</p>
             <div style="display:flex; gap:.6rem; flex-wrap:wrap">
-              <a class="btn" href="https://store.steampowered.com/app/923370/Cat_Warfare?utm_source=NSCG" target="_blank" rel="noopener">View On Steam</a>
+			
+              <a class="btn steam" href="https://store.steampowered.com/app/923370/Cat_Warfare/?utm_source=NSCG" target="_blank" rel="noopener">
+			  <img src="https://store.cloudflare.steamstatic.com/public/shared/images/header/globalheader_logo.png" alt="Steam" class="btn-icon">
+			  View On Steam
+			  </a>
+
               <a class="btn ghost" href="https://www.youtube.com/watch?v=C_Xx2DSSLcs" target="_blank" rel="noopener">Game Trailer</a>
             </div>
           </div>
@@ -259,7 +154,12 @@ html, body {margin: 0;background: linear-gradient(to bottom,
 			<h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'; color: rgba(255, 255, 255, .5);">Release: 2020</h3>
             <p style="margin:0 0 12px; color:var(--ink-dim)">Down The Hole is a unique puzzle based game where you quite literally have to go down the hole.</p>
             <div style="display:flex; gap:.6rem; flex-wrap:wrap">
-              <a class="btn" href="https://store.steampowered.com/app/1260160/Down_The_Hole/?utm_source=NSCG" target="_blank" rel="noopener">View On Steam</a>
+			
+			  <a class="btn steam" href="https://store.steampowered.com/app/1260160/Down_The_Hole/?utm_source=NSCG" target="_blank" rel="noopener">
+			  <img src="https://store.cloudflare.steamstatic.com/public/shared/images/header/globalheader_logo.png" alt="Steam" class="btn-icon">
+			  View On Steam
+			  </a>
+
 			  <a class="btn ghost" href="https://www.youtube.com/watch?v=ibwy33okTeU" target="_blank" rel="noopener">Game Trailer</a>
             </div>
           </div>
@@ -273,7 +173,12 @@ html, body {margin: 0;background: linear-gradient(to bottom,
 			<h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'; color: rgba(255, 255, 255, .5);">Release: 2020</h3>
             <p style="margin:0 0 12px; color:var(--ink-dim)">Where is my parking spot!? You have that urge, that drive, You MUST get to that special parking spot!</p>
             <div style="display:flex; gap:.6rem; flex-wrap:wrap">
-              <a class="btn" href="https://store.steampowered.com/app/1374400/Where_Is_My_Parking_Spot/?utm_source=NSCG" target="_blank" rel="noopener">View On Steam</a>
+              
+			  <a class="btn steam" href="https://store.steampowered.com/app/1374400/Where_Is_My_Parking_Spot/?utm_source=NSCG" target="_blank" rel="noopener">
+			  <img src="https://store.cloudflare.steamstatic.com/public/shared/images/header/globalheader_logo.png" alt="Steam" class="btn-icon">
+			  View On Steam
+			  </a>
+			  
 			  <a class="btn ghost" href="https://www.youtube.com/watch?v=dymxEM7D1YY" target="_blank" rel="noopener">Game Trailer</a>
             </div>
           </div>
@@ -287,7 +192,13 @@ html, body {margin: 0;background: linear-gradient(to bottom,
 			<h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'; color: rgba(255, 0, 0, .75);">Release: Canceled</h3>
             <p style="margin:0 0 12px; color:var(--ink-dim)">Not-So Classic Games, brings you the sequel to Where Is My Parking Spot. Drive, Drift and Slide your way to that special parking spot of yours.</p>
             <div style="display:flex; gap:.6rem; flex-wrap:wrap">
-              <a class="btn" href="https://store.steampowered.com/app/1631260/Where_Is_My_Parking_Spot__Parking_Reimagined/?utm_source=NSCG" target="_blank" rel="noopener">View On Steam</a>
+			  
+			  <a class="btn steam" href="https://store.steampowered.com/app/1631260/Where_Is_My_Parking_Spot__Parking_Reimagined/?utm_source=NSCG" target="_blank" rel="noopener">
+			  <img src="https://store.cloudflare.steamstatic.com/public/shared/images/header/globalheader_logo.png" alt="Steam" class="btn-icon">
+			  View On Steam
+			  </a>
+			  
+			  <a class="btn ghost" href="https://www.youtube.com/watch?v=EYlZxXVkDV0" target="_blank" rel="noopener">Game Trailer</a>
             </div>
           </div>
         </article>
@@ -300,7 +211,12 @@ html, body {margin: 0;background: linear-gradient(to bottom,
 			<h3 style="margin:0 0 6px; font:800 1.1rem/1.2 'Chakra Petch'; color: rgba(255, 255, 255, .5);">Release: TBA</h3>
             <p style="margin:0 0 12px; color:var(--ink-dim)">The world ravaged by a mutating virus. The Runners part of a ruthless gang called JunkRats, scavenge and scrap whatever they can, anything needed to survive, and turn a profit while doing it.</p>
             <div style="display:flex; gap:.6rem; flex-wrap:wrap">
-              <a class="btn" href="https://store.steampowered.com/app/1495770/JunkRats/?utm_source=NSCG" target="_blank" rel="noopener">Wishlist Now!</a>
+			  
+			  <a class="btn steam" href="https://store.steampowered.com/app/1495770/JunkRats/?utm_source=NSCG" target="_blank" rel="noopener">
+			  <img src="https://store.cloudflare.steamstatic.com/public/shared/images/header/globalheader_logo.png" alt="Steam" class="btn-icon">
+			  Wishlist Now!
+			  </a>
+			  
 			  <a class="btn ghost" href="https://www.youtube.com/watch?v=cR0glsCnckk" target="_blank" rel="noopener">Game Trailer</a>
             </div>
           </div>
@@ -318,16 +234,23 @@ html, body {margin: 0;background: linear-gradient(to bottom,
 	  <div class="divider"></div>
       
 	  <div class="team">
-        <div class="person"><img src="https://i.imgur.com/dEiJn2H.png"/><b>Danyon “Sonicboomcolt” Huntington</b><small>Founder & CEO • Lead Programmer • Music Composer</small></div>
-        <div class="person"><img src="https://i.imgur.com/1svoPNr.png"/><b>Adara “Ari”</b><small>Concept Artist • Level Designer • Promo Art</small></div>
-        <div class="person"><img src="https://i.imgur.com/1YAW3pT.png"/><b>Cade “NNJ” Hill</b><small>Concept Artist • 2D Animator • Storyboards</small></div>
-        <div class="person"><img src="https://i.imgur.com/8e4TC26.png"/><b>Joshua “J3rockin” Padgett</b><small>Quality Assurance Tester • Mechanic Concepts</small></div>
-        <div class="person"><img src="https://i.imgur.com/HJLzvTQ.png"/><b>Michael “Swordman27” Brook</b><small>Story Writer • 3D Modeler</small></div>
-        <div class="person"><img src="https://i.imgur.com/4VU11Io.png"/><b>Glen “Evolved Phoenix” Treasure</b><small>Supporting Programmer • Supporting QA</small></div>
-        <div class="person"><img src="https://i.imgur.com/lzdHQ2f.png"/><b>Kai “EmoCat_Special”</b><small>Concept Art • Promo Art • Steam Store Art</small></div>
-        <div class="person"><img src="https://i.imgur.com/6oAQGYV.png"/><b>Matthew “Sukhoikip” Bogle</b><small>Performance Testing • QA</small></div>
-        <div class="person"><img src="https://i.imgur.com/0R02Ydv.png"/><b>Braxie “Pikakid98” Moone</b><small>QA Tester • Cat Warfare Announcer • Voice Actor</small></div>
+        <div class="person"><img src="https://i.imgur.com/dEiJn2H.png"/><b>Danyon “Sonicboomcolt” Huntington</b><small>Founder & CEO<br>Lead Programmer<br>Music Composer</small></div>
+        <div class="person"><img src="https://i.imgur.com/1svoPNr.png"/><b>Adara “Ari”</b><small>Concept Artist<br>Level Designer<br>Promo Art</small></div>
+        <div class="person"><img src="https://i.imgur.com/1YAW3pT.png"/><b>Cade “NNJ” Hill</b><small>Concept Artist<br>2D Animator<br>Storyboards</small></div>
+        <div class="person"><img src="https://i.imgur.com/8e4TC26.png"/><b>Joshua “J3rockin” Padgett</b><small>Quality Assurance Tester<br>Mechanic Concepts</small></div>
+        <div class="person"><img src="https://i.imgur.com/HJLzvTQ.png"/><b>Michael “Swordman27” Brook</b><small>Story Writer<br>3D Modeler</small></div>
+        <div class="person"><img src="https://i.imgur.com/4VU11Io.png"/><b>Glen “Evolved Phoenix” Treasure</b><small>Supporting Programmer<br>Supporting QA</small></div>
+        <div class="person"><img src="https://i.imgur.com/lzdHQ2f.png"/><b>Kai “EmoCat_Special”</b><small>Concept Art<br>Promo Art<br>Steam Store Art</small></div>
       </div>
+	  
+	  <h2 class="section"></h2>
+	  <h2 class="section">Volunteers / Contractors</h2>
+      <p class="lede">The talented Volunteers and Contractors behind our games!</p>
+	  <div class="divider"></div>
+	  <div class="team">
+	    <div class="person"><img src="https://i.imgur.com/6oAQGYV.png"/><b>Matthew “Sukhoikip” Bogle</b><small>Performance Testing<br>QA</small></div>
+        <div class="person"><img src="https://i.imgur.com/0R02Ydv.png"/><b>Braxie “Pikakid98” Moone</b><small>QA Tester<br>Cat Warfare Announcer<br>Voice Actor</small></div>
+	  </div>
     </div>
   </section>
 
@@ -339,7 +262,7 @@ html, body {margin: 0;background: linear-gradient(to bottom,
     <h2 class="section">Special Thanks</h2>
     <div class="divider"></div>
     <div class="thanks">
-	  <div class="thank"><b>FirstGearGames</b><span> Without your Fish-Networking, our games could fall flat on networking.</span></div>
+	  <div class="thank"><b>FirstGearGames</b><span> Without your <a href="https://github.com/FirstGearGames/FishNet" target="_blank" rel="noopener">Fish-Networking</a>, our games could fall flat on networking.</span></div>
       <div class="thank"><b>Our Players</b><span> Without your support and feedback, none of this would be possible.</span></div>
       <div class="thank"><b>Friends & Family</b><span> For patience, encouragement, and putting up with long dev cycles.</span></div>
       <div class="thank"><b>Community Contributors</b><span> From testers to fan artists, you make the studio stronger.</span></div>
@@ -357,7 +280,7 @@ html, body {margin: 0;background: linear-gradient(to bottom,
 	  <div class="divider"></div>
       <div style="display:flex; gap:.6rem; flex-wrap:wrap">
         <a class="btn" href="https://forms.gle/PutLNR7r1VWczhLs7" target="_blank" rel="noopener">Application Form</a>
-        <a class="btn ghost" href="https://discord.gg/JcfeNDnC5k" target="_blank" rel="noopener">Join Our Discord</a>
+        <a class="btn discord" href="https://discord.gg/JcfeNDnC5k">Join Our Discord</a>
       </div>
       
     </div>
