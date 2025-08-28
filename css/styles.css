@@ -1,12 +1,12 @@
 :root{
-  --bg:#141414;         /* page background */
-  --bg-2:#11141a;       /* panels */
-  --ink:#e7ebf2;        /* text */
-  --ink-dim:#b7c0cf;    /* secondary text */
-  --accent:#ff7f00;     /* brand orange */
-  --accent-2:#666666;   /* highlight */
-  --accent-DIS:#5865F2; /* discord highlight */
-  --accent-steam:#1b2838; /* steam highlight */
+  --bg:#141414;         	/* page background */
+  --bg-2:#11141a;       	/* panels */
+  --ink:#e7ebf2;        	/* text */
+  --ink-dim:#b7c0cf;    	/* secondary text */
+  --accent:#ff7f00;     	/* brand orange */
+  --accent-2:#666666;   	/* highlight */
+  --accent-DIS:#5865F2;   	/* discord highlight */
+  --accent-steam:#1b2838; 	/* steam highlight */
   --card:#0f1217;
   --maxw:1200px;
   --radius:16px;
@@ -24,6 +24,28 @@ html, body {
   color: var(--ink);
   font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
+
+nav a i {
+  margin-right: .4rem;
+  font-size: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 1.6rem;
+}
+
+.social-links a {
+  color: var(--accent);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: var(--ink);
+  transform: scale(1.15);
+}
+
 
 a{color:var(--accent)}
 a:hover{opacity:.9}
@@ -65,14 +87,6 @@ header.site{position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) b
   border-color: var(--accent);
 }
 
-/*.btn.discord {
-  animation: pulse 2s infinite;
-}
-@keyframes pulse {
-  0%, 100% { box-shadow: 0 0 5px var(--accent-DIS), 0 0 20px var(--accent-DIS); }
-  50% { box-shadow: 0 0 2px var(--accent-DIS), 0 0 40px var(--accent-DIS); }
-}*/
-
 .btn.discord:hover {
   box-shadow: 0 0 12px var(--accent-DIS), 0 0 20px var(--accent-DIS);
   color: var(--accent-DIS);
@@ -89,6 +103,7 @@ header.site{position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) b
   display: flex;
   gap: 1.1rem;
   align-items: center;
+  flex-wrap:wrap;
 }
 
 .navlinks a {
@@ -123,6 +138,12 @@ header.site{position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) b
   background: linear-gradient(to bottom, #7772 0%, var(--bg) 100%);
 }
 
+.hero .frame { 
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
 section{padding:50px 0}
 h2.section{font:800 clamp(1.3rem,2.4vw,2rem)/1.2 'Chakra Petch', Inter, sans-serif; margin:0 0 18px}
 .lede{color:var(--ink-dim); margin:0 0 26px}
@@ -152,7 +173,6 @@ h2.section{font:800 clamp(1.3rem,2.4vw,2rem)/1.2 'Chakra Petch', Inter, sans-ser
 
 footer{padding:36px 0 60px; border-top:1px solid rgba(231,235,242,.06); color:var(--ink-dim)}
 
-/* Responsive */
 @media (max-width: 900px){
   .navlinks{display:none}
   .hamburger{display:block}
@@ -160,13 +180,34 @@ footer{padding:36px 0 60px; border-top:1px solid rgba(231,235,242,.06); color:va
   .values{grid-template-columns:1fr 1fr}
   .cards{grid-template-columns:1fr}
   .team{grid-template-columns:1fr}
-  .slideshow{display:none}
+  .brand{display:none}
+  
+  .hero .frame{
+    position: relative;
+    width: 100%;
+    height: 200px;          
+    overflow: hidden;       
+    border-radius: var(--radius);
+  }
+
+  .hero .slideshow{
+    position: absolute;
+    inset: 0;               
+    display: block;         
+  }
+
+  .hero .slideshow img{
+    width: 80%;
+    height: auto;           
+    object-fit: fill;
+  }
 }
+
 
 .slideshow{
   position:relative;
-  width:600px;   /* adjust size */
-  height:300px;  /* adjust size */
+  width:600px;   
+  height:300px; 
   overflow:visible;
 }
 .slideshow img{
@@ -179,7 +220,6 @@ footer{padding:36px 0 60px; border-top:1px solid rgba(231,235,242,.06); color:va
   animation:fade 25s infinite;
 }
 
-/* 5 images × 5s each = 25s loop */
 .slideshow img:nth-child(1){animation-delay:0s}
 .slideshow img:nth-child(2){animation-delay:5s}
 .slideshow img:nth-child(3){animation-delay:10s}
@@ -188,9 +228,9 @@ footer{padding:36px 0 60px; border-top:1px solid rgba(231,235,242,.06); color:va
 
 @keyframes fade{
   0%   {opacity:0}
-  10%  {opacity:1}  /* fade in */
-  30%  {opacity:1}  /* hold */
-  40%  {opacity:0}  /* fade out */
+  10%  {opacity:1}
+  30%  {opacity:1}
+  40%  {opacity:0}
   100% {opacity:0}
 }
 
@@ -211,7 +251,7 @@ footer{padding:36px 0 60px; border-top:1px solid rgba(231,235,242,.06); color:va
   opacity: .9;
 }
 
-/* Dropdown menu (hidden by default) */
+/* Dropdown menu*/
 .dropdown-content {
   display: none;
   position: absolute;
