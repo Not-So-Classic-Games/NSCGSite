@@ -213,7 +213,8 @@ footer{
 @media (max-width:900px){
 
   /* Header & Nav */
-  .navlinks{ display:none; }
+  
+  .navlinks{ display:none; padding: 1rem 3rem;}
   .hamburger{ display:block; }
   .brand{ display:none; }
 

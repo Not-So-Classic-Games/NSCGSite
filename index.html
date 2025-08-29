@@ -54,21 +54,7 @@ We want to thank all of our players and love everyones support!
       </a>
 
 <div id="site-nav"></div>
-<script>
-  (function() {
-    var BASE = '';
-    var target = document.getElementById('site-nav');
-
-    fetch(BASE + '/nav.html', { cache: 'no-cache' })
-      .then(function(res) { return res.text(); })
-      .then(function(html) { target.innerHTML = html; })
-      .catch(function(err) {
-        console.error('Nav failed to load', err);
-        target.innerHTML = '<!-- nav failed to load -->';
-      });
-  })();
-</script>
-
+<script src="/js/nav.js"></script>
 
       <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.navlinks').style.display = document.querySelector('.navlinks').style.display==='flex'?'none':'flex'">☰</button>
     </div>
@@ -127,12 +113,6 @@ We want to thank all of our players and love everyones support!
     </div>
   </section>
 <div id="footer"></div>
-<script>
-  fetch("/footer.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("footer").innerHTML = html;
-    });
-</script>
+<script src="/js/footer.js"></script>
 </body>
 </html>

@@ -8,6 +8,8 @@
   <link rel="apple-touch-icon" href="./images/brand/favcon.png" />
   
   <link rel="stylesheet" href="/css/styles.css">
+  
+  <meta name="robots" content="noindex,follow">
   <style>
   
 body {
@@ -74,72 +76,11 @@ body {
     <a class="btn" href="./">Back to Home</a>
   </div>
   
-  <script>
-  window.onload = function ()
-  {
-    const messages = [
-		"This page doesn’t exist... or it’s falling Down The Hole.",
-		"The page has despawned.",
-		"Object reference not set to an instance of an object.",
-		"This page doesn’t exist... whoops.",
-		"The cat stole this page... Sorry!",
-		"You found page 404, Nice!",
-		"You should check out Cat Warfare!",
-		"Oh hello! I think you took a wrong turn.",
-		"Sorry, cats scratched the page up.",
-		"Whoops, not the page you wanted.",
-		"The JunkRats scrapped this page.",
-		"OwO Something has gon wwong, pwease twy again watew."
-  ];
-  
-  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-  document.getElementById("message").textContent = randomMessage;
-  };
-  </script>
-  
-  
-<!-- 
-HEY! Get out of here, shoo! NO! Don't look at this!
+<h2 id="message"></h2>
+<script src="/js/missingpage.js"></script>
 
-Fine, just press the up arrow 4 times in a row. Always having to ruin the fun, huh.
- -->
 <audio id="secret-sound" src="/sounds/kittyspree.wav" preload="auto"></audio>
-<script>
-  let upCount = 0;
-  let resetTimer;
-  let isPlaying = false;
-
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowUp" && !isPlaying) {
-      upCount++;
-
-      clearTimeout(resetTimer);
-      resetTimer = setTimeout(() => { upCount = 0; }, 2000);
-
-      if (upCount === 4) {
-        const audio = document.getElementById("secret-sound");
-        const title = document.querySelector(".error-container h1");
-
-        const originalText = title.textContent;
-        title.textContent = "KITTY SPREE";
-        isPlaying = true;
-
-        audio.currentTime = 0;
-        audio.volume = .5;
-        audio.play();
-
-        audio.onended = () => {
-          title.textContent = originalText;
-          isPlaying = false;
-        };
-
-        upCount = 0;
-      }
-    } else if (e.key !== "ArrowUp") {
-      upCount = 0;
-    }
-  });
-</script>
+<script src="/js/missingpagespree.js"></script>
   
 </body>
 </html>
