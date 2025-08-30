@@ -207,6 +207,7 @@ footer{
 .media-block{ display:flex; gap:20px; }
 .media-block img{ max-width:300px; height:auto; }
 
+
 .video-container {
   display: flex;
   justify-content: center; 
